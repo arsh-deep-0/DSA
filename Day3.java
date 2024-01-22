@@ -218,3 +218,19 @@ class Solution {
         return profit;
     }
 }
+
+10. Remove duplicates from sorted array
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int n= nums.length;
+        int index=0;
+        for(int i=1;i<n;i++){
+            if(nums[i]!=nums[index]){
+                nums[index+1]=nums[i];
+                index++;
+            }
+        }
+        return index+1;
+    }
+}
